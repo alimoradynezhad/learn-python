@@ -1,15 +1,9 @@
-str_to_int = int('20')
-int_to_str = str(11)
+import os
+import pandas
+
+import math as m
 
 
-
-list = ['10', '12', '13']
-sum = list[0] + list[1]
-print(sum)
-a = int(list[0])
-b = int(list[1])
-sum2 =a+b
-print(sum2)
-
-str_to_int = int('20')
-int_to_str = str(11)
+print(m.sin(30))#اشتباه
+help()
+print(m.sin(m.radians(30)))
