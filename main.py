@@ -1,36 +1,39 @@
-lst = [1, 1, 2, 5, 2, 2, 'reza', 'reza', 'reza', 'reza', 'reza']
-count1 = 0
-count2 = 0
-count3 = 0
-count4 = 0
-for i in lst:
-    if i == 1:
-        count1 +=1
-    elif i == 2:
-        count2 +=1
-    elif i == 5:
-        count3 +=1
-    elif i == 'reza':
-        count4 +=1
-
-print(f"1  >>>>>>>>>>>>  {count1}")
-print(f"2  >>>>>>>>>>>>  {count2}")
-print(f"5  >>>>>>>>>>>>>  {count3}")
-print(f"rezs >>>>>>>>>>> {count4}")
-
-print("----------Exercise 2-------------")
-
-list = ['11', 'pooya', '10', '15.5']
-
-for y in list:
+print("--------- tupleنوع داده -------")
+# مثل لیست فقط در دیتا بیس از تاپل استفاده میشه وبه جای براکت از پرانتز استفاده میکنه
+tuple1 = (1, 2, 5, "ali")
+print(tuple1)
+print(type(tuple1))
+print(tuple1[1])
 
 
-    if y=='11':
-        print(y)
-    elif y=='10':
-        print(y)
-    elif y == 'pooya' or '15.5':
-        continue
+print("-----------نوع دادهset ----------------")
+#ایندکسی نیست
+set1 ={1, 2, 5, "ali", 15, "reza"}
+set2 ={'hamed', 4, 5, 12}
+print(set1)
+print('ali' in set1)
+print(set2 | set1)
+print(set1 > set2)
+print(set1 < set2)
+print(set1 - set2)
+print(set1 & set2)# هردو موجوده
+print(len(set1))
+set1.add('ahmad')
+print(set1)
 
 
-
+print("---------------نوع داده dictionary---------------")
+capitals = {'iran':'tehran',
+            'france':'paris',
+            'italy':'rom'}
+capitals2 ={'germany':'berlin',
+            'uk':'london'}
+print(capitals)
+print(capitals['iran'])
+capitals['spain'] = 'madrid'
+print(capitals)
+print('iran' in capitals)
+capitals.update(capitals2)#add two dictionary
+print(capitals)
+'shiraz' in capitals.keys()
+print(capitals.keys())
