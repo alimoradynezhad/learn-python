@@ -1,46 +1,13 @@
-print("---------loop | dictionary | enumrate -----------")
-capitals = {'iran': 'tehran', 'spain': 'madrid', 'italy': 'rom'}
-# استفاده از حلقه و نوع داده دیکشنری
-for key in capitals:
-    print(key)
-    print(capitals)
-    print(capitals.values())
-# هر دو حلقه مشابه ولی این خوانایی بهتری دارد
-for key in capitals.keys():
-    print(key)
-    print(capitals.values())
-# مقدار ها رو نشون میده
-for value in capitals.values():
-    print(value)
-#آیتم
-print("-------------------------")
-for item in capitals.items():
-    print(item)
-# آیتم به شکل جدا کردن unpack
-for k, v in capitals.items():
-    print(k, v)
+# if تک خطی
+val1 = 10
+val2 = 20  if val1 == 1 else 10#اگر val1 مقدارش 1 بود که هیچ اگر نه val2 را با 10 مقدار دهی کن
+print(val2)
 
-#جابه جا کردی key , value
-print("-------------------------")
-revers_capital = dict()# ساخت دیکشنری جدید
-for k, v in capitals.items():
-    revers_capital[v] = k
-print(revers_capital)
+val1 = 10
+val2 = 20  if val1 == 1 else 5#اگر val1 مقدارش 1 بود که هیچ اگر نه val2 را با 5 مقدار دهی کن
+print(val2)
 
-#enumrate
-print("-------------------------")
-# هم مقدار را میدهد هم ایندکس
-lst = [1, 2, 'ali', 82]
-for en, s in enumerate(lst):
-    print(en, '>>>>>>', s)
-# از یک ایندکس خاص شروع کند
-for en, s in enumerate(lst, 2):
-    print(en, s)
-#زیپ
-print("-------------------------")
-lst1 = [1, 2, 3, 4]
-lst2 = [4, 3, 2, 1]
-lst3 =[]
-for a, b in zip(lst1, lst2):
-    lst3.append(a + b)
-print(lst3)
+sqr1 = [i**2 for i in range(10)]#از صفر تا 10 را به توان 2 برسان
+print(sqr1)
+sqr = [i**3 if i % 3 == 0 else 10 for i in range(10, 30)]#از 10 تا 30 را به توان 3 برسان اگر باقیمانده تقسیم بر سه اش 0 شد در غیر اینصورت 10 بزار
+print(sqr)
